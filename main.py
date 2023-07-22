@@ -13,6 +13,9 @@ def divide(a, b):
     else:
         return "Ошибка: деление на ноль недопустимо"
 
+def power(a, b):
+    return a ** b
+
 def main():
     print("Простой калькулятор")
     print("===================")
@@ -23,6 +26,7 @@ def main():
         print("2. Вычитание")
         print("3. Умножение")
         print("4. Деление")
+        print("5. Возведение в степень")
         print("0. Выход")
 
         choice = input("Введите номер операции: ")
@@ -31,7 +35,7 @@ def main():
             print("До свидания!")
             break
 
-        if choice in ("1", "2", "3", "4"):
+        if choice in ("1", "2", "3", "4", "5"):
             num1 = float(input("Введите первое число: "))
             num2 = float(input("Введите второе число: "))
 
@@ -43,6 +47,8 @@ def main():
                 print("Результат:", multiply(num1, num2))
             elif choice == "4":
                 print("Результат:", divide(num1, num2))
+            elif choice == "5":
+                print("Результат:", power(num1, num2))
         else:
             print("Ошибка: неверный выбор операции. Повторите попытку.")
 
